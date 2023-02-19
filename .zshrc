@@ -70,8 +70,8 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-syntax-highlighting zsh-pentest web-search)
-
+plugins=(git zsh-syntax-highlighting zsh-pentest web-search zsh-autosuggestions)
+#ZSH_TMUX_AUTOSTART=true
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -96,17 +96,9 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 case $- in *i*)
     [ -z "$TMUX" ] && exec tmux
 esac
-
-alias gst="spike-fuzzer-generic-send_tcp"
-export PATH=$PATH:/home/ap425q/tools/S3Scanner
-export GOPATH=$HOME/go
-export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
-export PATH=$PATH:$HOME/.npm-global
-export PATH=$PATH:/home/ap425q/tools/github-search
-export PATH=$PATH:/home/ap425q/tools/git-secrets
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
